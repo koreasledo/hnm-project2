@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  background-color: black;
+  color: white;
+}
+.navbar {
+  height: 80px;
+}
+.nav-item {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.nav-item:hover {
+  color: lightgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.banner {
+  height: 800px;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner::before {
+  position: absolute;
+  left:0;
+  width: 100%;
+  height: 800px;
+  content: '';
+  background: linear-gradient(to right, black, transparent);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner-info {
+  position: absolute;
+  z-index: 10;
+  margin-top: 100px;
+  width: 40%;
+  margin-left: 50px;
+}
+
+.slide {
+  height: 300px;
+}
+.card {
+  background-color: black;
+  width: 247px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  opacity: 0;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  background: rgba(43, 41, 41, 0.8);
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-title {
+  font-size: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-genre {
+  text-align: center;
+
+}
+
+.card-badge {
+  margin-left: 2px;
+  margin-right: 2px;
 }
